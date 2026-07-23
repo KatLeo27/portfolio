@@ -27,7 +27,9 @@ export default function Certificates() {
   const claudeCertificates: Certificate[] = [
     { title: 'Claude Code in Action', issuer: 'Anthropic', image: '/certificates/Claude-code-in-action-certificate.png', badgeClass: 'badge-accent-2' },
     { title: 'Claude Code 101', issuer: 'Anthropic', image: '/certificates/Claude-code-101-certificate.png', badgeClass: 'badge-accent-2' },
+    { title: 'Networking Basics', issuer: 'Cisco', image: '/certificates/cisco-networking-basics.png', badgeClass: 'badge-accent-2' },
     { title: 'Claude Platform 101', issuer: 'Anthropic', image: '/certificates/Claude-platform-101-certificate.png', badgeClass: 'badge-accent-2' },
+    { title: 'Introduction to IoT & Digital Transformation', issuer: 'Cisco', image: '/certificates/cisco-iot-digital-transformation.png', badgeClass: 'badge-accent-2' },
     { title: 'Claude 101 Core Foundations', issuer: 'Anthropic', image: '/certificates/Claude-101-certificate.png', badgeClass: 'badge-accent-2' },
     { title: 'Introduction to Claude Co-working', issuer: 'Anthropic', image: '/certificates/Introduction-to-claude-cowork-certificate.png', badgeClass: 'badge-accent-2' }
   ];
