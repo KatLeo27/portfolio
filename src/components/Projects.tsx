@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cpu, ArrowRight, X, Sparkles } from 'lucide-react';
+import { Cpu, ArrowRight, X, Sparkles, ArrowUpRight } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -12,6 +12,8 @@ interface Project {
   role: string;
   diagram: React.ReactNode;
   features: string[];
+  liveLink?: string;
+  githubLink?: string;
 }
 
 export default function Projects() {
@@ -32,6 +34,8 @@ export default function Projects() {
         'Polished dashboard displaying security scorecards and compliance health metrics',
         'Compliance risk mitigation advisor engine'
       ],
+      liveLink: 'https://ai-grc-analyser.vercel.app/',
+      githubLink: 'https://github.com/KatLeo27/AI-GRC-Analyser',
       diagram: (
         <svg viewBox="0 0 400 160" width="100%" height="100%" style={{ background: '#111019', borderRadius: '8px', padding: '12px' }}>
           {/* Doc Upload */}
@@ -77,6 +81,8 @@ export default function Projects() {
         'Augmented LLM prompt constructing reference citations',
         'Interactive CLI/UI query terminal'
       ],
+      liveLink: 'https://rag-study-assistant-xi.vercel.app/',
+      githubLink: 'https://github.com/KatLeo27/rag-study-assistant',
       diagram: (
         <svg viewBox="0 0 400 160" width="100%" height="100%" style={{ background: '#111019', borderRadius: '8px', padding: '12px' }}>
           {/* Files */}
@@ -101,6 +107,100 @@ export default function Projects() {
           <defs>
             <marker id="arrow2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
               <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-accent-2)" />
+            </marker>
+          </defs>
+        </svg>
+      )
+    },
+    {
+      id: 3,
+      title: 'Sales Analytics Dashboard',
+      category: 'Full-Stack Web Development & Analytics',
+      description: 'A dynamic sales analytics dashboard allowing users to manage product and sales information while visualizing key business metrics through interactive charts.',
+      longDescription: 'Designed and developed a dynamic sales analytics dashboard that allows users to manage product and sales information while visualising key business metrics through interactive dashboards. Implemented real-time CRUD functionality, filtering capabilities, and performance analytics to support business reporting, identify sales trends, and facilitate data-driven decision-making.',
+      role: 'Full-Stack & Database Developer',
+      technologies: ['Next.js', 'React.js', 'Django', 'Python', 'JavaScript', 'HTML', 'CSS', 'REST APIs', 'Git', 'GitHub'],
+      features: [
+        'Real-time CRUD operations for products and sales records',
+        'Dynamic metric cards displaying revenue, items sold, and top products',
+        'Interactive charts visualizing sales trends and performance metrics',
+        'Advanced search and multi-parameter filtering capabilities'
+      ],
+      liveLink: 'https://sales-analytics-dashboard-smoky.vercel.app/',
+      githubLink: 'https://github.com/KatLeo27/sales-analytics-dashboard',
+      diagram: (
+        <svg viewBox="0 0 400 160" width="100%" height="100%" style={{ background: '#111019', borderRadius: '8px', padding: '12px' }}>
+          {/* Frontend Client */}
+          <rect x="15" y="55" width="85" height="50" rx="6" fill="rgba(200, 125, 135, 0.08)" stroke="var(--color-accent-1)" strokeWidth="1" />
+          <text x="57" y="80" fill="var(--color-text-primary)" fontSize="9" fontWeight="600" textAnchor="middle">Next.js / React</text>
+          <text x="57" y="92" fill="var(--color-text-secondary)" fontSize="7" textAnchor="middle">Interactive Dashboard</text>
+          
+          <path d="M 105 80 L 140 80" stroke="var(--color-border-hover)" strokeWidth="1.5" markerEnd="url(#arrow3)" />
+
+          {/* API & Backend */}
+          <rect x="150" y="45" width="100" height="70" rx="8" fill="rgba(120, 172, 193, 0.08)" stroke="var(--color-accent-2)" strokeWidth="1.5" />
+          <text x="200" y="70" fill="var(--color-accent-2)" fontSize="10" fontWeight="700" textAnchor="middle">Django API</text>
+          <text x="200" y="85" fill="var(--color-text-primary)" fontSize="8" textAnchor="middle">CRUD &amp; Analytics</text>
+          <text x="200" y="98" fill="var(--color-text-secondary)" fontSize="7" textAnchor="middle">REST Middleware</text>
+          
+          <path d="M 255 80 L 290 80" stroke="var(--color-border-hover)" strokeWidth="1.5" strokeDasharray="3, 3" markerEnd="url(#arrow3)" />
+
+          {/* Database / Storage */}
+          <rect x="300" y="55" width="85" height="50" rx="6" fill="rgba(107, 117, 86, 0.08)" stroke="var(--color-accent-3)" strokeWidth="1" />
+          <text x="342" y="80" fill="var(--color-text-primary)" fontSize="9" fontWeight="600" textAnchor="middle">Database</text>
+          <text x="342" y="92" fill="var(--color-text-secondary)" fontSize="7" textAnchor="middle">Sales &amp; Products</text>
+
+          {/* Markers */}
+          <defs>
+            <marker id="arrow3" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-accent-2)" />
+            </marker>
+          </defs>
+        </svg>
+      )
+    },
+    {
+      id: 4,
+      title: 'SpendWise – Smart Expense Tracker',
+      category: 'Cloud Finance & Applications',
+      description: 'A cloud-based personal finance management application enabling users to securely track and manage their daily expenses in real-time.',
+      longDescription: 'Developed a cloud-based personal finance management application that enables users to securely track and manage their daily expenses. Implemented Google Authentication using Firebase Authentication and integrated Firestore for real-time cloud data storage, allowing users to perform CRUD operations through a clean, responsive interface while gaining insights into their spending habits.',
+      role: 'Lead Developer',
+      technologies: ['React.js', 'Firebase', 'Firebase Auth', 'Firestore', 'JavaScript', 'HTML', 'CSS', 'Git'],
+      features: [
+        'Secure Google OAuth authentication via Firebase Auth',
+        'Real-time expense syncing and persistence in Firestore',
+        'CRUD capabilities for logging, updating, and deleting expenses',
+        'Responsive monthly budget dashboards and charts'
+      ],
+      liveLink: 'https://spendwise-expense-tracker.lovable.app/',
+      githubLink: 'https://github.com/KatLeo27/spendwise',
+      diagram: (
+        <svg viewBox="0 0 400 160" width="100%" height="100%" style={{ background: '#111019', borderRadius: '8px', padding: '12px' }}>
+          {/* Auth Block */}
+          <rect x="15" y="55" width="80" height="50" rx="6" fill="rgba(200, 125, 135, 0.08)" stroke="var(--color-accent-1)" strokeWidth="1" />
+          <text x="55" y="80" fill="var(--color-text-primary)" fontSize="9" fontWeight="600" textAnchor="middle">Firebase Auth</text>
+          <text x="55" y="92" fill="var(--color-text-secondary)" fontSize="7" textAnchor="middle">Google Login</text>
+          
+          <path d="M 95 80 L 130 80" stroke="var(--color-border-hover)" strokeWidth="1.5" markerEnd="url(#arrow4)" />
+
+          {/* UI Core */}
+          <rect x="140" y="45" width="120" height="70" rx="8" fill="rgba(120, 172, 193, 0.08)" stroke="var(--color-accent-2)" strokeWidth="1.5" />
+          <text x="200" y="70" fill="var(--color-accent-2)" fontSize="10" fontWeight="700" textAnchor="middle">React.js Client</text>
+          <text x="200" y="85" fill="var(--color-text-primary)" fontSize="8" textAnchor="middle">Expense Log CRUD</text>
+          <text x="200" y="98" fill="var(--color-text-secondary)" fontSize="7" textAnchor="middle">State Management</text>
+          
+          <path d="M 260 80 L 295 80" stroke="var(--color-border-hover)" strokeWidth="1.5" strokeDasharray="3, 3" markerEnd="url(#arrow4)" />
+
+          {/* Firestore Database */}
+          <rect x="305" y="55" width="80" height="50" rx="6" fill="rgba(107, 117, 86, 0.08)" stroke="var(--color-accent-3)" strokeWidth="1" />
+          <text x="345" y="80" fill="var(--color-text-primary)" fontSize="9" fontWeight="600" textAnchor="middle">Firestore</text>
+          <text x="345" y="92" fill="var(--color-text-secondary)" fontSize="7" textAnchor="middle">Real-time Docs</text>
+
+          {/* Markers */}
+          <defs>
+            <marker id="arrow4" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-accent-1)" />
             </marker>
           </defs>
         </svg>
@@ -154,9 +254,9 @@ export default function Projects() {
                   left: 0, 
                   right: 0, 
                   height: '3px',
-                  background: project.id === 1 
-                    ? 'linear-gradient(to right, var(--color-accent-1), var(--color-accent-2))'
-                    : 'linear-gradient(to right, var(--color-accent-2), var(--color-accent-3))'
+                  background: project.id % 2 === 0
+                    ? 'linear-gradient(to right, var(--color-accent-2), var(--color-accent-3))'
+                    : 'linear-gradient(to right, var(--color-accent-1), var(--color-accent-2))'
                 }} 
               />
 
@@ -392,7 +492,7 @@ export default function Projects() {
                 </div>
 
                 {/* Key Features */}
-                <div>
+                <div style={{ marginBottom: '24px' }}>
                   <h4 style={{ fontSize: '1.05rem', color: 'var(--color-text-primary)', marginBottom: '12px' }}>Core Engineering Features</h4>
                   <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                     {selectedProject.features.map((feat, idx) => (
@@ -402,6 +502,41 @@ export default function Projects() {
                       </li>
                     ))}
                   </ul>
+                </div>
+
+                {/* Project Links (Live Demo & Source Code) */}
+                <div 
+                  style={{ 
+                    display: 'flex', 
+                    flexWrap: 'wrap',
+                    gap: '16px', 
+                    marginTop: '32px', 
+                    paddingTop: '20px', 
+                    borderTop: '1px solid var(--color-border)' 
+                  }}
+                >
+                  {selectedProject.liveLink && (
+                    <a 
+                      href={selectedProject.liveLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn btn-primary"
+                      style={{ fontSize: '0.85rem', padding: '10px 20px', textDecoration: 'none' }}
+                    >
+                      View Live Application <ArrowUpRight size={14} />
+                    </a>
+                  )}
+                  {selectedProject.githubLink && (
+                    <a 
+                      href={selectedProject.githubLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn btn-secondary"
+                      style={{ fontSize: '0.85rem', padding: '10px 20px', textDecoration: 'none' }}
+                    >
+                      View Source Code
+                    </a>
+                  )}
                 </div>
 
               </motion.div>
