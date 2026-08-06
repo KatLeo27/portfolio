@@ -18,6 +18,7 @@ export default function Certificates() {
     { title: 'Frontend Development with React', issuer: 'Coursera', image: '/certificates/Frontend-with-react-certificate.png', badgeClass: 'badge-accent-1' },
     { title: 'HTML, CSS & JS for Web Dev', issuer: 'Coursera', image: '/certificates/HTML-CSS-JS-certificate.png', badgeClass: 'badge-accent-1' },
     { title: 'Introduction to Cloud Computing', issuer: 'Coursera', image: '/certificates/Cloud-computing-certificate.png', badgeClass: 'badge-accent-1' },
+    { title: 'Data Analytics Certification', issuer: 'Deloitte', image: '/certificates/Deloitte-data-analytics-certificate.png', badgeClass: 'badge-accent-3' },
     { title: 'Intro to Software Engineering', issuer: 'Coursera', image: '/certificates/Intro-to-software-engineering-certificate.png', badgeClass: 'badge-accent-1' },
     { title: 'Git & GitHub Version Control', issuer: 'Coursera', image: '/certificates/Git-and-github-certificate.png', badgeClass: 'badge-accent-1' },
     { title: 'Career Guide & Interview Prep', issuer: 'Coursera', image: '/certificates/Career-guide-and-interview-preparation-certificate.png', badgeClass: 'badge-accent-1' },
@@ -28,9 +29,12 @@ export default function Certificates() {
     { title: 'Claude Code in Action', issuer: 'Anthropic', image: '/certificates/Claude-code-in-action-certificate.png', badgeClass: 'badge-accent-2' },
     { title: 'Claude Code 101', issuer: 'Anthropic', image: '/certificates/Claude-code-101-certificate.png', badgeClass: 'badge-accent-2' },
     { title: 'Networking Basics', issuer: 'Cisco', image: '/certificates/cisco-networking-basics.png', badgeClass: 'badge-accent-2' },
+    { title: 'The Rise of Multiagent Systems', issuer: 'DeepLearning.AI', image: '/certificates/The-Rise-of-Multiagent-Systems.png', badgeClass: 'badge-accent-2' },
     { title: 'Claude Platform 101', issuer: 'Anthropic', image: '/certificates/Claude-platform-101-certificate.png', badgeClass: 'badge-accent-2' },
     { title: 'Introduction to IoT & Digital Transformation', issuer: 'Cisco', image: '/certificates/cisco-iot-digital-transformation.png', badgeClass: 'badge-accent-2' },
+    { title: 'Unleashing the Power of AI Agents', issuer: 'DeepLearning.AI', image: '/certificates/Unleashing-the-Power-of-AI-Agents.png', badgeClass: 'badge-accent-2' },
     { title: 'Claude 101 Core Foundations', issuer: 'Anthropic', image: '/certificates/Claude-101-certificate.png', badgeClass: 'badge-accent-2' },
+    { title: 'Introduction to RAG', issuer: 'DeepLearning.AI', image: '/certificates/Introduction-to-Retrieval-Augmented-Generation.png', badgeClass: 'badge-accent-2' },
     { title: 'Introduction to Claude Co-working', issuer: 'Anthropic', image: '/certificates/Introduction-to-claude-cowork-certificate.png', badgeClass: 'badge-accent-2' }
   ];
 

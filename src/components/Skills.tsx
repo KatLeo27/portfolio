@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code2, Globe, Brain, Wrench, Database, Cloud } from 'lucide-react';
+import { Code2, Globe, Brain, Wrench, Database, Cloud, BarChart, Briefcase } from 'lucide-react';
 
 interface SkillCategory {
   title: string;
@@ -12,32 +12,42 @@ export default function Skills() {
     {
       title: 'Programming Languages',
       icon: <Code2 size={20} style={{ color: 'var(--color-accent-1)' }} />,
-      skills: ['Python', 'Java', 'C++', 'C']
+      skills: ['C', 'C++', 'Java', 'Python', 'JavaScript', 'TypeScript']
     },
     {
       title: 'Web Technologies',
       icon: <Globe size={20} style={{ color: 'var(--color-accent-2)' }} />,
-      skills: ['React.js', 'Node.js', 'Express.js', 'Flask', 'Django', 'REST APIs', 'HTML & CSS']
+      skills: ['HTML', 'CSS', 'React.js', 'Node.js', 'Express.js', 'Flask', 'Django', 'REST APIs']
     },
     {
-      title: 'AI & Data Science',
+      title: 'AI & Data Analytics',
       icon: <Brain size={20} style={{ color: 'var(--color-accent-1)' }} />,
-      skills: ['RAG Frameworks', 'Vector Databases', 'Embeddings', 'Machine Learning', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'OpenAI API']
-    },
-    {
-      title: 'Salesforce & CRM',
-      icon: <Cloud size={20} style={{ color: 'var(--color-accent-2)' }} />,
-      skills: ['Salesforce Platform', 'Sales Cloud', 'Service Cloud']
+      skills: ['Retrieval-Augmented Generation (RAG)', 'LLMs', 'LangChain', 'OpenAI APIs', 'Embeddings', 'Vector Databases', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn']
     },
     {
       title: 'Database Management',
       icon: <Database size={20} style={{ color: 'var(--color-accent-3)' }} />,
-      skills: ['MySQL', 'MongoDB']
+      skills: ['MySQL', 'SQL', 'PostgreSQL', 'MongoDB', 'Firebase Firestore', 'Supabase']
+    },
+    {
+      title: 'Cloud Computing',
+      icon: <Cloud size={20} style={{ color: 'var(--color-accent-2)' }} />,
+      skills: ['AWS (Fundamentals)', 'Core Cloud Computing Concepts']
+    },
+    {
+      title: 'CRM & Business Platforms',
+      icon: <Briefcase size={20} style={{ color: 'var(--color-accent-1)' }} />,
+      skills: ['Salesforce Platform', 'Salesforce Developer Org', 'Sales Cloud', 'Service Cloud', 'Revenue Cloud']
+    },
+    {
+      title: 'Business Analytics',
+      icon: <BarChart size={20} style={{ color: 'var(--color-accent-2)' }} />,
+      skills: ['Requirements Gathering', 'Stakeholder Communication', 'Pre-Sales Support', 'Business Process Analysis', 'Solution Design', 'Workflow Analysis', 'Functional Documentation', 'SDLC', 'Agile Methodology']
     },
     {
       title: 'Tools & Platforms',
       icon: <Wrench size={20} style={{ color: 'var(--color-accent-3)' }} />,
-      skills: ['Git', 'GitHub', 'VS Code', 'Claude Code', 'Docker', 'Postman']
+      skills: ['Git', 'GitHub', 'VS Code', 'Claude Code', 'Docker', 'Postman', 'Microsoft Teams', 'Microsoft Excel']
     }
   ];
 
@@ -45,16 +55,16 @@ export default function Skills() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1 }
+      transition: { staggerChildren: 0.08 }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
+    hidden: { opacity: 0, scale: 0.96 },
     visible: { 
       opacity: 1, 
       scale: 1,
-      transition: { duration: 0.5, cubicBezier: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.4, cubicBezier: [0.16, 1, 0.3, 1] }
     }
   };
 
@@ -79,11 +89,6 @@ export default function Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '24px',
-          }}
         >
           {skillCategories.map((category) => (
             <motion.div
@@ -94,7 +99,8 @@ export default function Skills() {
                 padding: '24px',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '20px'
+                gap: '20px',
+                height: '100%'
               }}
             >
               {/* Category Title */}
@@ -153,7 +159,18 @@ export default function Skills() {
 
       </div>
       <style>{`
-        @media (max-width: 480px) {
+        .skills-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px;
+          align-items: stretch;
+        }
+        @media (max-width: 1024px) {
+          .skills-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 640px) {
           .skills-grid {
             grid-template-columns: 1fr !important;
           }
