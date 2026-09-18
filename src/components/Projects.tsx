@@ -22,6 +22,53 @@ export default function Projects() {
   const projects: Project[] = [
     {
       id: 1,
+      title: 'AI-Powered Personal Health Record & Healthcare Assistant',
+      category: 'HealthTech & AI Engineering',
+      description: 'A full-stack healthtech platform unifying medical records with asynchronous OCR extraction, JWT/RBAC security, and a LangChain RAG assistant citing source documents.',
+      longDescription: 'Built a full-stack platform unifying fragmented medical records into one secure dashboard, with a FastAPI backend, JWT-based auth/RBAC, and a normalized PostgreSQL schema, backed by an asynchronous OCR and entity-extraction pipeline for uploaded reports. Implemented a RAG-based assistant using LangChain and ChromaDB to answer natural-language health queries with cited source documents, alongside health analytics and a timeline view.',
+      role: 'Lead Full-Stack & AI Engineer',
+      technologies: ['React.js (Vite)', 'Python', 'FastAPI', 'PostgreSQL (Supabase)', 'ChromaDB', 'LangChain', 'Tesseract OCR', 'JWT', 'REST APIs', 'WebSockets'],
+      features: [
+        'Asynchronous OCR & entity-extraction pipeline for uploaded medical reports',
+        'LangChain & ChromaDB RAG assistant answering queries with cited source documents',
+        'FastAPI backend with JWT-based authentication & role-based access control (RBAC)',
+        'Interactive medical records timeline and comprehensive health analytics view'
+      ],
+      liveLink: 'https://github.com/KatLeo27',
+      githubLink: 'https://github.com/KatLeo27',
+      diagram: (
+        <svg viewBox="0 0 400 160" width="100%" height="100%" style={{ background: '#111019', borderRadius: '8px', padding: '12px' }}>
+          {/* Medical Report / OCR */}
+          <rect x="15" y="55" width="75" height="50" rx="6" fill="rgba(200, 125, 135, 0.08)" stroke="var(--color-accent-1)" strokeWidth="1" />
+          <text x="52" y="78" fill="var(--color-text-primary)" fontSize="8.5" fontWeight="600" textAnchor="middle">Medical Reports</text>
+          <text x="52" y="90" fill="var(--color-text-secondary)" fontSize="7" textAnchor="middle">OCR Pipeline</text>
+          
+          <path d="M 90 80 L 120 80" stroke="var(--color-border-hover)" strokeWidth="1.5" markerEnd="url(#arrowHealth)" />
+
+          {/* Vector Store & RAG */}
+          <rect x="125" y="45" width="100" height="70" rx="8" fill="rgba(120, 172, 193, 0.08)" stroke="var(--color-accent-2)" strokeWidth="1.5" />
+          <text x="175" y="68" fill="var(--color-accent-2)" fontSize="9.5" fontWeight="700" textAnchor="middle">ChromaDB + RAG</text>
+          <text x="175" y="82" fill="var(--color-text-primary)" fontSize="7.5" textAnchor="middle">LangChain Pipeline</text>
+          <text x="175" y="94" fill="var(--color-text-secondary)" fontSize="6.5" textAnchor="middle">Cited Health Queries</text>
+          
+          <path d="M 225 80 L 255 80" stroke="var(--color-border-hover)" strokeWidth="1.5" strokeDasharray="3, 3" markerEnd="url(#arrowHealth)" />
+
+          {/* FastAPI & PostgreSQL */}
+          <rect x="260" y="45" width="125" height="70" rx="8" fill="rgba(107, 117, 86, 0.08)" stroke="var(--color-accent-3)" strokeWidth="1.5" />
+          <text x="322" y="68" fill="var(--color-accent-3)" fontSize="9.5" fontWeight="700" textAnchor="middle">FastAPI + Supabase</text>
+          <text x="322" y="82" fill="var(--color-text-primary)" fontSize="7.5" textAnchor="middle">PostgreSQL / JWT RBAC</text>
+          <text x="322" y="94" fill="var(--color-text-secondary)" fontSize="6.5" textAnchor="middle">React (Vite) Frontend</text>
+
+          <defs>
+            <marker id="arrowHealth" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-accent-1)" />
+            </marker>
+          </defs>
+        </svg>
+      )
+    },
+    {
+      id: 2,
       title: 'AI-Powered GRC Platform',
       category: 'Enterprise AI & Automation',
       description: 'An AI-driven Governance, Risk & Compliance (GRC) platform that automates vendor security assessments by analyzing compliance documents and generating risk insights.',
@@ -68,7 +115,7 @@ export default function Projects() {
       )
     },
     {
-      id: 2,
+      id: 3,
       title: 'RAG-Based Study Assistant',
       category: 'AI Research & Education',
       description: 'A context-aware study assistant that accepts multi-format document uploads and answers queries precisely using semantic search and retrieval.',
@@ -113,7 +160,54 @@ export default function Projects() {
       )
     },
     {
-      id: 3,
+      id: 4,
+      title: 'Customer Churn Prediction — Logistic Regression',
+      category: 'Machine Learning & Predictive Modeling',
+      description: 'An end-to-end churn prediction pipeline on a 7,000+ record telecom dataset achieving 80% accuracy and 0.84 ROC-AUC to identify key churn drivers.',
+      longDescription: 'Built an end-to-end churn prediction pipeline on a 7,000+ record telecom dataset, performing EDA, correlation analysis, and preprocessing (missing-value handling, categorical encoding, feature scaling) before training a Logistic Regression classifier. Achieved 80% accuracy and 0.84 ROC-AUC; used coefficient analysis to identify contract type, tenure, and internet service type as the strongest churn drivers, translating findings into actionable retention recommendations.',
+      role: 'ML & Data Science Engineer',
+      technologies: ['Python', 'Pandas', 'Scikit-learn', 'Logistic Regression', 'ROC-AUC', 'Classification Metrics', 'Matplotlib', 'Seaborn'],
+      features: [
+        'Comprehensive EDA and correlation analysis across 7,000+ telecom records',
+        'Robust data preprocessing: missing value imputation, categorical encoding, feature scaling',
+        'Logistic Regression model achieving 80% accuracy and 0.84 ROC-AUC',
+        'Coefficient analysis identifying contract type, tenure, and internet service as primary churn drivers'
+      ],
+      liveLink: 'https://github.com/KatLeo27',
+      githubLink: 'https://github.com/KatLeo27',
+      diagram: (
+        <svg viewBox="0 0 400 160" width="100%" height="100%" style={{ background: '#111019', borderRadius: '8px', padding: '12px' }}>
+          {/* Dataset */}
+          <rect x="15" y="55" width="75" height="50" rx="6" fill="rgba(120, 172, 193, 0.08)" stroke="var(--color-accent-2)" strokeWidth="1" />
+          <text x="52" y="78" fill="var(--color-text-primary)" fontSize="8.5" fontWeight="600" textAnchor="middle">Telecom Data</text>
+          <text x="52" y="90" fill="var(--color-text-secondary)" fontSize="7" textAnchor="middle">7,000+ Records</text>
+          
+          <path d="M 90 80 L 120 80" stroke="var(--color-border-hover)" strokeWidth="1.5" markerEnd="url(#arrowChurn)" />
+
+          {/* Preprocessing & Model */}
+          <rect x="125" y="45" width="115" height="70" rx="8" fill="rgba(200, 125, 135, 0.08)" stroke="var(--color-accent-1)" strokeWidth="1.5" />
+          <text x="182" y="68" fill="var(--color-accent-1)" fontSize="9.5" fontWeight="700" textAnchor="middle">Logistic Regression</text>
+          <text x="182" y="82" fill="var(--color-text-primary)" fontSize="7.5" textAnchor="middle">EDA &amp; Feature Scaling</text>
+          <text x="182" y="94" fill="var(--color-text-secondary)" fontSize="6.5" textAnchor="middle">Encoding &amp; Correlation</text>
+          
+          <path d="M 240 80 L 270 80" stroke="var(--color-border-hover)" strokeWidth="1.5" strokeDasharray="3, 3" markerEnd="url(#arrowChurn)" />
+
+          {/* Evaluation & Insights */}
+          <rect x="275" y="45" width="110" height="70" rx="8" fill="rgba(107, 117, 86, 0.08)" stroke="var(--color-accent-3)" strokeWidth="1.5" />
+          <text x="330" y="68" fill="var(--color-accent-3)" fontSize="9.5" fontWeight="700" textAnchor="middle">80% Acc / 0.84 AUC</text>
+          <text x="330" y="82" fill="var(--color-text-primary)" fontSize="7.5" textAnchor="middle">Coefficient Analysis</text>
+          <text x="330" y="94" fill="var(--color-text-secondary)" fontSize="6.5" textAnchor="middle">Churn Retention Drivers</text>
+
+          <defs>
+            <marker id="arrowChurn" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-accent-2)" />
+            </marker>
+          </defs>
+        </svg>
+      )
+    },
+    {
+      id: 5,
       title: 'Sales Analytics Dashboard',
       category: 'Full-Stack Web Development & Analytics',
       description: 'A dynamic sales analytics dashboard allowing users to manage product and sales information while visualizing key business metrics through interactive charts.',
@@ -160,7 +254,7 @@ export default function Projects() {
       )
     },
     {
-      id: 4,
+      id: 6,
       title: 'SpendWise – Smart Expense Tracker',
       category: 'Cloud Finance & Applications',
       description: 'A cloud-based personal finance management application enabling users to securely track and manage their daily expenses in real-time.',
@@ -218,7 +312,7 @@ export default function Projects() {
             <Cpu style={{ color: 'var(--color-accent-2)' }} /> Highlighted Projects
           </h2>
           <p className="section-subtitle">
-            Engineered systems highlighting AI applications and robust backend architectures.
+            Engineered systems highlighting AI applications, data science pipelines, and robust backend architectures.
           </p>
         </div>
 
@@ -275,7 +369,7 @@ export default function Projects() {
 
               <h3 
                 style={{ 
-                  fontSize: '1.4rem', 
+                  fontSize: '1.35rem', 
                   marginBottom: '16px', 
                   color: 'var(--color-text-primary)',
                   display: 'flex',
